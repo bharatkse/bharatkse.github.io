@@ -1,0 +1,20 @@
+title: "Bharat Kumar – Software Engineer"
+description: "Python · Django · FastAPI · AWS · Cloud"
+remote_theme: pages-themes/beautiful-jekyll
+plugins:
+  - jekyll-remote-theme
+author:
+  name: "Bharat Kumar"
+  github: "bharatkse"
+social:
+  linkedin: "bharat-kumar28"
+  stackoverflow: "4286590"
+projects:
+  - name: "AWS Roles Anywhere Auth"
+    description: "Python tool for AWS credential auth"
+    url: "https://github.com/bharatkse/aws-roles-anywhere-auth"
+    tech: ["Python", "AWS"]
+  - name: "SurveyHub"
+    description: "Survey app with Python backend"
+    url: "https://github.com/bharatkse/surveyhub"
+    tech: ["Python", "Web"]
