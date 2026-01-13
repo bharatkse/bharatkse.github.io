@@ -1,0 +1,14 @@
+Bharat Kumar:
+  name: "Bharat Kumar"
+  bio: "Senior Software Engineer with expertise in Python, Django, FastAPI, and AWS"
+  avatar: "/assets/images/avatar.jpg"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/bharat-kumar28"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/bharatkse"
+    - label: "Stack Overflow"
+      icon: "fab fa-fw fa-stack-overflow"
+      url: "https://stackoverflow.com/users/4286590/bharatk"

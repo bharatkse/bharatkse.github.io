@@ -1,20 +1,155 @@
-title: "Bharat Kumar – Software Engineer"
-description: "Python · Django · FastAPI · AWS · Cloud"
-remote_theme: pages-themes/beautiful-jekyll
-plugins:
-  - jekyll-remote-theme
+# Site Configuration
+title: "Bharat Kumar"
+subtitle: "Senior Software Engineer"
+description: "Senior Software Engineer specializing in Python, Django, FastAPI, and AWS. Building scalable cloud solutions."
+url: "https://bharatkse.github.io"
+baseurl: ""
+repository: "bharatkse/bharatkse.github.io"
+teaser: "/assets/images/default-teaser.png"
+
+# Author Configuration
 author:
   name: "Bharat Kumar"
-  github: "bharatkse"
-social:
-  linkedin: "bharat-kumar28"
-  stackoverflow: "4286590"
-projects:
-  - name: "AWS Roles Anywhere Auth"
-    description: "Python tool for AWS credential auth"
-    url: "https://github.com/bharatkse/aws-roles-anywhere-auth"
-    tech: ["Python", "AWS"]
-  - name: "SurveyHub"
-    description: "Survey app with Python backend"
-    url: "https://github.com/bharatkse/surveyhub"
-    tech: ["Python", "Web"]
+  avatar: "/assets/images/avatar.jpg"
+  bio: "Senior Software Engineer | Python | Django | FastAPI | AWS | Cloud Architect"
+  location: "Bangalore, India"
+  email: "kumar.bhart28@gmail.com"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/bharat-kumar28"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/bharatkse"
+    - label: "Stack Overflow"
+      icon: "fab fa-fw fa-stack-overflow"
+      url: "https://stackoverflow.com/users/4286590/bharatk"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:kumar.bhart28@gmail.com"
+
+# Theme (Minimal Mistakes)
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "dark" # Options: air, aqua, contrast, dark, default, dirt, neon, mint, plum, sunrise
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+
+# Markdown
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Pagination
+paginate: 10
+paginate_path: /blog/page:num/
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jemoji
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jemoji
+
+# Category Archive
+category_archive:
+  type: liquid
+  path: /categories/
+
+# Tag Archive
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+  
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+
+# Conversion
+timezone: Asia/Kolkata
+
+# Comments (Optional - Disqus/Utterances)
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-dark"
+    issue_term: "pathname"
+    label: "comment"
+    repo: "bharatkse/bharatkse.github.io"
+
+# Analytics (Optional - Google Analytics)
+analytics:
+  provider: "google-ga4"
+  google:
+    measurement_id: "G-XXXXXXXXXX"
+
+# Search
+search: true
+search_full_content: true
+search_provider: "lunr"
+
+# Output
+output: web
