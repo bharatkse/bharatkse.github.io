@@ -1,0 +1,29 @@
+<article class="card-item">
+  <header class="card-header">
+    <h2 class="card-title">
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h2>
+
+    {% assign primary_category = post.categories | first %}
+
+    {% include post-meta.html
+    content=post.content
+    date=post.date
+    category=primary_category
+    %}
+
+  </header>
+
+  <div class="card-body">
+    <p class="card-excerpt">
+      {{ post.excerpt | default: post.content | strip_html | truncatewords: 40 }}
+    </p>
+  </div>
+
+  <footer class="card-footer">
+    {% include post-tags.html tags=post.tags %}
+    <a href="{{ post.url }}" class="read-more">
+      Read More <i class="fas fa-arrow-right"></i>
+    </a>
+  </footer>
+</article>

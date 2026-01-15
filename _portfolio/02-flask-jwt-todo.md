@@ -1,8 +1,6 @@
 ---
 title: "Flask JWT Todo API"
 excerpt: "Secure REST API with modern authentication patterns"
-header:
-  teaser: /assets/images/portfolio/api.webp
 sidebar:
   - title: "Role"
     text: "Developer"
@@ -10,6 +8,12 @@ sidebar:
     text: "Flask, JWT, PostgreSQL, SQLAlchemy"
   - title: "Repository"
     text: "[GitHub](https://github.com/bharatkse/flask_jwt_todo)"
+github:
+  repo: "https://github.com/bharatkse/flask_jwt_todo"
+  branch: "main"
+  ci: true
+  codecov: true
+  sonar: false
 ---
 
 ## Overview

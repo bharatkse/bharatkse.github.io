@@ -1,0 +1,22 @@
+{% assign words = include.content | number_of_words %}
+{% assign read_time = words | divided_by: 200 %}
+{% if read_time == 0 %}{% assign read_time = 1 %}{% endif %}
+
+<div class="post-meta">
+  <span class="post-date">
+    <i class="fas fa-calendar"></i>
+    {{ include.date | date: "%B %d, %Y" }}
+  </span>
+
+  <span class="reading-time">
+    <i class="fas fa-clock"></i>
+    {{ read_time }} min read
+  </span>
+
+  {% if include.category %}
+    <span class="category">
+      <i class="fas fa-folder"></i>
+      {{ include.category }}
+    </span>
+  {% endif %}
+</div>

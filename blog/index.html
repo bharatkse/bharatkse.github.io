@@ -1,0 +1,17 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="blog-posts-container">
+  {% for post in paginator.posts %}
+    {% include post-card.html post=post %}
+  {% endfor %}
+</div>
+
+{% include pagination.html
+   current_page=paginator.page
+   total_pages=paginator.total_pages
+   prev_url=paginator.previous_page_path
+   next_url=paginator.next_page_path
+%}

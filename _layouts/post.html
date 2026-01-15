@@ -1,0 +1,7 @@
+{% assign primary_category = page.categories | first %}
+
+{% include post-meta.html
+   content=page.content
+   date=page.date
+   category=primary_category
+%}

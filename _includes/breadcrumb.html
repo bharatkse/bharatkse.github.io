@@ -1,0 +1,53 @@
+{% assign url_parts = page.url | split: '/' %}
+{% assign breadcrumb_path = "" %}
+
+{% comment %}
+  Map section name → Font Awesome icon
+{% endcomment %}
+{% assign icon_map = 
+  "blog:fa-blog,projects:fa-cubes,about:fa-circle-info,contact:fa-envelope" 
+  | split: "," 
+%}
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <!-- Home -->
+  <a href="/" class="breadcrumb-home" title="Home">
+    <i class="fas fa-house"></i>
+  </a>
+
+  {% for part in url_parts %}
+    {% if part != "" %}
+      {% assign breadcrumb_path = breadcrumb_path | append: '/' | append: part %}
+
+      <span class="breadcrumb-separator">
+        <i class="fas fa-chevron-right"></i>
+      </span>
+
+      {% assign part_clean = part | replace:'-',' ' %}
+      {% assign part_icon = "" %}
+
+      {% for pair in icon_map %}
+        {% assign kv = pair | split: ":" %}
+        {% if kv[0] == part %}
+          {% assign part_icon = kv[1] %}
+        {% endif %}
+      {% endfor %}
+
+      {% if forloop.last %}
+        <span class="breadcrumb-current">
+          {% if part_icon != "" %}
+            <i class="fas {{ part_icon }}"></i>
+          {% endif %}
+          {{ page.title | default: part_clean | capitalize }}
+        </span>
+      {% else %}
+        <a href="{{ breadcrumb_path | relative_url }}">
+          {% if part_icon != "" %}
+            <i class="fas {{ part_icon }}"></i>
+          {% endif %}
+          {{ part_clean | capitalize }}
+        </a>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</nav>

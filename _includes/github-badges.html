@@ -1,0 +1,43 @@
+{% if include.repo %}
+<div class="github-badges">
+
+  <!-- License -->
+  <a href="https://github.com/{{ include.repo }}/blob/{{ include.branch | default: 'main' }}/LICENSE"
+     target="_blank" rel="noopener">
+    <img
+      alt="License"
+      src="https://img.shields.io/github/license/{{ include.repo }}?style=flat-square">
+  </a>
+
+  {% if include.ci %}
+  <!-- CI -->
+  <a href="https://github.com/{{ include.repo }}/actions"
+     target="_blank" rel="noopener">
+    <img
+      alt="CI Status"
+      src="https://img.shields.io/github/actions/workflow/status/{{ include.repo }}/ci.yml?branch={{ include.branch | default: 'main' }}&style=flat-square">
+  </a>
+  {% endif %}
+
+  {% if include.codecov %}
+  <!-- Codecov -->
+  <a href="https://codecov.io/gh/{{ include.repo }}"
+     target="_blank" rel="noopener">
+    <img
+      alt="Code coverage"
+      src="https://img.shields.io/codecov/c/github/{{ include.repo }}?style=flat-square">
+  </a>
+  {% endif %}
+
+  {% if include.sonar %}
+  <!-- SonarCloud Quality Gate -->
+  <a href="https://sonarcloud.io/project/overview?id={{ include.repo | replace: '/', '_' }}"
+     target="_blank" rel="noopener">
+    <img
+      alt="Quality Gate"
+      src="https://sonarcloud.io/api/project_badges/measure?project={{ include.repo | replace: '/', '_' }}&metric=alert_status">
+  </a>
+  {% endif %}
+
+</div>
+{% endif %}

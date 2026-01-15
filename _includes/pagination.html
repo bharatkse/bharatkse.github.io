@@ -1,0 +1,17 @@
+{% if include.total_pages > 1 %}
+<nav class="pagination">
+
+  {% if include.prev_url %}
+    <a href="{{ include.prev_url }}" class="page-link">← Previous</a>
+  {% endif %}
+
+  <span class="page-status">
+    Page {{ include.current_page }} of {{ include.total_pages }}
+  </span>
+
+  {% if include.next_url %}
+    <a href="{{ include.next_url }}" class="page-link">Next →</a>
+  {% endif %}
+
+</nav>
+{% endif %}

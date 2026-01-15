@@ -1,8 +1,12 @@
 ---
 title: "AWS Roles Anywhere Authentication"
 excerpt: "Generate temporary AWS credentials without AWS signing helper"
-header:
-  teaser: /assets/images/portfolio/aws.png
+github:
+  repo: "https://github.com/bharatkse/aws-roles-anywhere-auth"
+  branch: "main"
+  ci: true
+  codecov: true
+  sonar: false
 sidebar:
   - title: "Role"
     text: "Developer"

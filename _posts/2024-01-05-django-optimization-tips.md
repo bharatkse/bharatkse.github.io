@@ -5,6 +5,7 @@ categories: [Python, Django]
 tags: [django, python, performance, optimization, database]
 excerpt: "Practical techniques to optimize your Django applications for better performance"
 author: Bharat Kumar
+
 ---
 
 ## Database Optimization

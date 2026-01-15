@@ -1,109 +1,141 @@
 ---
-title: "About Me"
+layout: default
 permalink: /about/
-layout: single
-author_profile: true
+title: "About"
 ---
+<div class="about-hero">
+  <div class="about-hero-content">
+    <h1>Bharat Kumar</h1>
+    <div class="title">
+      <i class="fas fa-code"></i>
+      Senior Software Engineer
+    </div>
+    <div class="location">
+      <i class="fas fa-map-marker-alt"></i>
+      Ahmedabad, India
+    </div>
+  </div>
+</div>
 
-## 👋 Hello!
+<div class="intro-section">
+  <p>Hi, I'm Bharat Kumar, a Senior Software Engineer specializing in building scalable backend systems and cloud infrastructure using Python, Django, FastAPI, and AWS.</p>
 
-I'm Bharat Kumar, a Senior Software Engineer based in Bangalore, India with 8+ years of experience in backend development and cloud architecture.
+  <p>With years of experience in software development, I've worked on everything from microservices architectures to large-scale data processing pipelines. I'm passionate about clean code, system design, and solving complex technical challenges.</p>
+</div>
 
-## 💼 Professional Background
+<div class="stats-row">
+  <div class="stat-card">
+    <div class="number">9+</div>
+    <div class="label">Years Experience</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">50+</div>
+    <div class="label">Projects Delivered</div>
+  </div>
+  <div class="stat-card">
+    <div class="number">10+</div>
+    <div class="label">Technologies</div>
+  </div>
+</div>
 
-At **Quinnox**, I lead the development of complex backend systems, architecting solutions that handle millions of transactions while maintaining performance and reliability.
+<div class="section-header">
+  <i class="fas fa-tools"></i>
+  <h2>Technical Skills</h2>
+</div>
 
-Over the years, I've:
-- Architected microservices handling millions of daily transactions
-- Optimized cloud infrastructure, reducing costs by 40%+
-- Led teams in designing and implementing scalable SaaS platforms
-- Mentored junior developers and helped them grow their careers
-- Contributed to open-source projects in the Python ecosystem
+<div class="skills-grid">
+  <div class="skill-category">
+    <h3><i class="fas fa-code"></i> Backend Development</h3>
+    <ul>
+      <li>Python</li>
+      <li>Django</li>
+      <li>FastAPI</li>
+      <li>Flask</li>
+      <li>REST APIs</li>
+    </ul>
+  </div>
 
-## 🎯 Areas of Expertise
+  <div class="skill-category">
+    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+    <ul>
+      <li>AWS (EC2, S3, Lambda)</li>
+      <li>Docker</li>
+      <li>Kubernetes</li>
+      <li>CI/CD</li>
+      <li>Terraform</li>
+    </ul>
+  </div>
 
-### Backend Development
-- **Languages**: Python (10+ years), JavaScript/Node.js
-- **Frameworks**: Django & DRF, FastAPI, Flask
-- **Architecture**: RESTful APIs, Microservices, System Design
-- **Patterns**: SOLID principles, Design Patterns, Clean Code
+  <div class="skill-category">
+    <h3><i class="fas fa-database"></i> Databases</h3>
+    <ul>
+      <li>PostgreSQL</li>
+      <li>MySQL</li>
+      <li>Redis</li>
+      <li>MongoDB</li>
+      <li>DynamoDB</li>
+    </ul>
+  </div>
 
-### Cloud & DevOps
-- **AWS Services**: EC2, RDS, S3, Lambda, IAM, CloudFormation
-- **Containerization**: Docker, Docker Compose
-- **Orchestration**: Kubernetes, ECS
-- **CI/CD**: GitHub Actions, Jenkins, GitLab CI
-- **Infrastructure**: Infrastructure as Code, Terraform basics
+  <div class="skill-category">
+    <h3><i class="fas fa-wrench"></i> Tools & Others</h3>
+    <ul>
+      <li>Git</li>
+      <li>Linux</li>
+      <li>Nginx</li>
+      <li>RabbitMQ</li>
+      <li>Celery</li>
+    </ul>
+  </div>
+</div>
 
-### Database & Performance
-- **Relational**: PostgreSQL, MySQL
-- **Optimization**: Query optimization, indexing strategies, query tuning
-- **Caching**: Redis, Memcached
-- **Data Modeling**: Normalization, schema design
+<div class="section-header">
+  <i class="fas fa-rocket"></i>
+  <h2>What I Do</h2>
+</div>
 
-### Security & Authentication
-- **Auth Methods**: JWT, OAuth 2.0, SAML, SSO
-- **Cryptography**: SSL/TLS, encryption, certificate management, X509
-- **API Security**: Rate limiting, CORS, API authentication
-- **Best Practices**: OWASP, secure coding, dependency scanning
+<div class="work-highlights">
+  <div class="highlight-card">
+    <div class="icon"><i class="fas fa-server"></i></div>
+    <h3>Backend Architecture</h3>
+    <p>Building robust, scalable backend systems that can handle millions of requests with optimized performance.</p>
+  </div>
 
-## 🌱 Philosophy & Approach
+  <div class="highlight-card">
+    <div class="icon"><i class="fas fa-project-diagram"></i></div>
+    <h3>System Design</h3>
+    <p>Designing APIs, optimizing database queries, and implementing caching strategies for high availability.</p>
+  </div>
 
-I believe in:
-1. **Code is Communication** - Write code for humans first, compilers second
-2. **Scalability Matters** - Design systems that grow with business needs
-3. **Security is Non-Negotiable** - Security should be built in, not bolted on
-4. **Continuous Learning** - Technology evolves, and so should we
-5. **Mentorship Multiplies Impact** - Helping others grow multiplies your impact
+  <div class="highlight-card">
+    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+    <h3>Cloud Solutions</h3>
+    <p>Helping teams migrate to AWS and design cost-effective, secure infrastructure with automation.</p>
+  </div>
+</div>
 
-## 📊 Key Achievements
+<div class="section-header">
+  <i class="fas fa-heart"></i>
+  <h2>Beyond Code</h2>
+</div>
 
-- Led development of SaaS platform serving 50,000+ users
-- Reduced API response time by 60% through optimization
-- Mentored 10+ junior developers in their career growth
-- Architected microservices reducing deployment time by 75%
-- Achieved 99.9% system uptime through proper infrastructure design
+<p>When I'm not coding, I enjoy learning about new technologies, contributing to open source projects, and sharing knowledge through blog posts and technical documentation. I believe in continuous learning and giving back to the developer community.</p>
 
-## 📚 Technical Skills Summary
-
-| Category | Skills |
-|----------|--------|
-| **Languages** | Python, JavaScript, SQL, Bash |
-| **Backend Frameworks** | Django, FastAPI, Flask, Express.js |
-| **Cloud** | AWS (EC2, RDS, S3, Lambda, IAM) |
-| **DevOps** | Docker, Kubernetes, CI/CD, GitHub Actions |
-| **Databases** | PostgreSQL, MySQL, Redis, MongoDB basics |
-| **Tools** | Git, Docker, Kubernetes, Terraform, Jenkins |
-
-## 💡 What I'm Open To
-
-- **Freelance Projects** - Backend development, API design, cloud architecture consulting
-- **Full-Time Opportunities** - Senior Engineering roles, Tech Lead positions, Architect roles
-- **Consulting** - SaaS architecture, cloud optimization, infrastructure design, team mentoring
-- **Collaboration** - Open-source contributions, knowledge sharing, technical discussions
-- **Speaking** - Tech talks, workshops, webinars on backend development and cloud architecture
-
-## 🎓 Learning & Growth
-
-I'm passionate about continuous learning:
-- Regularly explore new technologies and architectural patterns
-- Active contributor to Python ecosystem open-source projects
-- Share knowledge through technical writing and mentoring
-- Stay updated with industry best practices and trends
-- Participate in tech communities and conferences
-
-## 📬 Let's Connect
-
-I'm always interested in discussing interesting projects, sharing knowledge, and exploring new opportunities.
-
-**Contact Information:**
-- **Email**: [kumar.bhart28@gmail.com](mailto:kumar.bhart28@gmail.com)
-- **LinkedIn**: [in/bharat-kumar28](https://linkedin.com/in/bharat-kumar28)
-- **GitHub**: [bharatkse](https://github.com/bharatkse)
-- **Stack Overflow**: [bharatk](https://stackoverflow.com/users/4286590/bharatk)
-
-I typically respond within 24 hours. Looking forward to connecting with you!
-
----
-
-*Last updated: January 2026*
+<div class="contact-cta">
+  <h2>Let's Connect</h2>
+  <p>Feel free to reach out if you'd like to collaborate on a project or just want to chat about technology!</p>
+  <div class="contact-buttons">
+    <a href="https://github.com/bharatkse" class="contact-btn">
+      <i class="fab fa-github"></i>
+      GitHub
+    </a>
+    <a href="https://linkedin.com/in/bharat-kumar28" class="contact-btn">
+      <i class="fab fa-linkedin"></i>
+      LinkedIn
+    </a>
+    <a href="mailto:kumar.bhart28@gmail.com" class="contact-btn">
+      <i class="fas fa-envelope"></i>
+      Email
+    </a>
+  </div>
+</div>

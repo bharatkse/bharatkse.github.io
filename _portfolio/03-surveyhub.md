@@ -1,8 +1,6 @@
 ---
 title: "SurveyHub"
 excerpt: "Full-stack survey management platform"
-header:
-  teaser: /assets/images/portfolio/survey.png
 sidebar:
   - title: "Role"
     text: "Full Stack Developer"
@@ -10,6 +8,12 @@ sidebar:
     text: "Django, PostgreSQL, Bootstrap"
   - title: "Repository"
     text: "[GitHub](https://github.com/bharatkse/surveyhub)"
+github:
+  repo: "https://github.com/bharatkse/surveyhub"
+  branch: "main"
+  ci: true
+  codecov: true
+  sonar: false
 ---
 
 ## Overview

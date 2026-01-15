@@ -1,0 +1,69 @@
+<!-- FILE: _layouts/default.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+
+    <meta name="description"
+        content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+    <!-- Font Awesome (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" />
+        
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">{{ site.title }} personal blog</a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/blog">Blog</a>
+                <a href="/projects">Projects</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% if page.url != "/" %}
+            {% include breadcrumb.html %}
+        {% endif %}
+
+        {{ content }}
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>
+                © 2026 All rights reserved. Made by
+                <a href="https://github.com/bharatkse">bharatkse</a>
+            </p>
+            <div class="footer-social">
+                <a href="https://github.com/bharatkse" aria-label="GitHub" target="_blank">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/bharat-kumar28" aria-label="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:kumar.bhart28@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

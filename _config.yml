@@ -1,26 +1,56 @@
-# Site Configuration
+# =====================================================
+# JEKYLL CONFIGURATION - BHARAT KUMAR PORTFOLIO
+# =====================================================
+
+# =====================================================
+# SITE METADATA
+# =====================================================
 title: "Bharat Kumar"
 subtitle: "Senior Software Engineer"
-description: "Senior Software Engineer specializing in Python, Django, FastAPI, and AWS. Building scalable cloud solutions."
+tagline: "Building scalable cloud solutions with Python, Django, FastAPI, and AWS"
+description: "Senior Software Engineer specializing in backend development, cloud architecture, and scalable solutions. Python • Django • FastAPI • AWS • Microservices"
+
+# URLs
 url: "https://bharatkse.github.io"
 baseurl: ""
 repository: "bharatkse/bharatkse.github.io"
-teaser: "/assets/images/default-teaser.png"
+github_username: "bharatkse"
 
-# Author Configuration
+# =====================================================
+# THEME SETTINGS
+# =====================================================
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+# Skin options: default, air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
+minimal_mistakes_skin: "default"
+
+# =====================================================
+# BRANDING & VISUAL
+# =====================================================
+# Logo and favicon
+logo: false
+favicon: false
+teaser: "/assets/images/teaser.jpg"
+breadcrumbs: true
+
+# =====================================================
+# AUTHOR INFORMATION
+# =====================================================
 author:
   name: "Bharat Kumar"
-  avatar: "/assets/images/avatar.jpg"
-  bio: "Senior Software Engineer | Python | Django | FastAPI | AWS | Cloud Architect"
-  location: "Bangalore, India"
+  avatar: "/assets/images/avatar.jpg"  # Add your profile picture here
+  bio: "Senior Software Engineer | Backend Development | Cloud Architecture | Python • Django • FastAPI • AWS"
+  location: "Bangalore, India 🇮🇳"
   email: "kumar.bhart28@gmail.com"
+  
+  # Social links
   links:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/bharat-kumar28"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/bharatkse"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/bharat-kumar28"
     - label: "Stack Overflow"
       icon: "fab fa-fw fa-stack-overflow"
       url: "https://stackoverflow.com/users/4286590/bharatk"
@@ -28,23 +58,70 @@ author:
       icon: "fas fa-fw fa-envelope"
       url: "mailto:kumar.bhart28@gmail.com"
 
-# Theme (Minimal Mistakes)
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "dark" # Options: air, aqua, contrast, dark, default, dirt, neon, mint, plum, sunrise
+# =====================================================
+# FOOTER SETTINGS
+# =====================================================
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/bharatkse"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/bharat-kumar28"
+    - label: "Stack Overflow"
+      icon: "fab fa-fw fa-stack-overflow"
+      url: "https://stackoverflow.com/users/4286590/bharatk"
 
-# Reading Files
+# Atom feed
+atom_feed:
+  hide: false
+  path: "/feed.xml"
+
+# =====================================================
+# NAVIGATION
+# =====================================================
 include:
   - .htaccess
   - _pages
+  - CHANGELOG
+  - LICENSE
 
-# Markdown
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+  - .github
+
+# =====================================================
+# MARKDOWN PROCESSING
+# =====================================================
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-# Markdown Processing
 kramdown:
   input: GFM
   hard_wrap: false
@@ -54,17 +131,22 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+      start_line: 1
 
-# Sass/SCSS
+# =====================================================
+# SASS/SCSS
+# =====================================================
 sass:
   sass_dir: _sass
   style: compressed
 
-# Pagination
-paginate: 10
-paginate_path: /blog/page:num/
-
-# Plugins
+# =====================================================
+# PLUGINS
+# =====================================================
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -73,7 +155,6 @@ plugins:
   - jekyll-include-cache
   - jemoji
 
-# mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
   - jekyll-sitemap
@@ -82,25 +163,69 @@ whitelist:
   - jekyll-include-cache
   - jemoji
 
-# Category Archive
+# =====================================================
+# PAGINATION (DISABLED - Using manual loop instead)
+# =====================================================
+# Note: Minimal Mistakes theme handles pagination differently
+# We're using a simpler approach with all posts on one page
+# If you want pagination, you may need to use jekyll-paginate-v2
+paginate: 2
+paginate_path: "/blog/page:num/"
+
+# =====================================================
+# SEARCH (DISABLED)
+# =====================================================
+search: false
+search_full_content: false
+search_provider: false
+
+# =====================================================
+# COMMENTS (OPTIONAL - DISABLED BY DEFAULT)
+# =====================================================
+comments:
+  provider: false
+  # Uncomment below to enable utterances comments
+  # provider: "utterances"
+  # utterances:
+  #   theme: "github-light"
+  #   issue_term: "pathname"
+  #   label: "comment"
+  #   repo: "bharatkse/bharatkse.github.io"
+
+# =====================================================
+# ANALYTICS (OPTIONAL - DISABLED BY DEFAULT)
+# =====================================================
+analytics:
+  provider: false
+  # Uncomment below to enable Google Analytics
+  # provider: "google-ga4"
+  # google:
+  #   measurement_id: "G-XXXXXXXXXX"
+
+# =====================================================
+# COLLECTIONS
+# =====================================================
+collections:
+  portfolio:
+    output: true
+    permalink: /projects/:path/
+
+# =====================================================
+# CATEGORY & TAG ARCHIVES
+# =====================================================
 category_archive:
   type: liquid
   path: /categories/
 
-# Tag Archive
 tag_archive:
   type: liquid
   path: /tags/
 
-# Collections
-collections:
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-
-# Defaults
+# =====================================================
+# DEFAULTS (FRONT MATTER DEFAULTS)
+# =====================================================
 defaults:
-  # _posts
+  # Posts
   - scope:
       path: ""
       type: posts
@@ -108,48 +233,74 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: true
       related: true
-  
-  # _pages
+      classes: wide
+      toc: true
+      toc_sticky: true
+      toc_label: "Contents"
+
+  # Pages
   - scope:
       path: "_pages"
       type: pages
     values:
       layout: single
       author_profile: false
-  
-  # _portfolio
+      classes: wide
+
+  # Portfolio
   - scope:
       path: ""
       type: portfolio
     values:
       layout: single
       author_profile: false
+      share: false
+      classes: wide
 
-# Conversion
-timezone: Asia/Kolkata
+# =====================================================
+# SEO & SOCIAL METADATA
+# =====================================================
+locale: "en-US"
+timezone: "Asia/Kolkata"
+words_per_minute: 200
 
-# Comments (Optional - Disqus/Utterances)
-comments:
-  provider: "utterances"
-  utterances:
-    theme: "github-dark"
-    issue_term: "pathname"
-    label: "comment"
-    repo: "bharatkse/bharatkse.github.io"
+social:
+  type: "Person"
+  name: "Bharat Kumar"
+  links:
+    - "https://github.com/bharatkse"
+    - "https://linkedin.com/in/bharat-kumar28"
+    - "https://stackoverflow.com/users/4286590/bharatk"
 
-# Analytics (Optional - Google Analytics)
-analytics:
-  provider: "google-ga4"
-  google:
-    measurement_id: "G-XXXXXXXXXX"
+# =====================================================
+# READING TIME
+# =====================================================
+reading_time:
+  enabled: true
+  label: "minute read"
 
-# Search
-search: true
-search_full_content: true
-search_provider: "lunr"
+# =====================================================
+# MINIMAL MISTAKES SPECIFIC SETTINGS
+# =====================================================
+teaser_height: 200px
+breadcrumb_separator: "/"
+twitter:
+  username: ""
 
-# Output
-output: web
+# =====================================================
+# BUILD SETTINGS
+# =====================================================
+keep_files:
+  - .git
+  - .gitignore
+  - assets
+
+# =====================================================
+# FUTURE & DRAFTS
+# =====================================================
+future: false
+show_drafts: false
+unpublished: false

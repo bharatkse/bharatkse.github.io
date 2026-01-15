@@ -1,0 +1,914 @@
+/* =====================================================
+   GitHub Design Tokens (Light Theme)
+   ===================================================== */
+
+:root {
+  /* Backgrounds */
+  --gh-bg: #ffffff;
+  --gh-bg-subtle: #f6f8fa;
+  --gh-bg-muted: #eef1f4;
+
+  /* Text */
+  --gh-text-primary: #24292f;
+  --gh-text-secondary: #57606a;
+  --gh-text-tertiary: #6e7781;
+
+  /* Borders */
+  --gh-border: #d0d7de;
+  --gh-border-muted: #eaeef2;
+
+  /* Links & Actions */
+  --gh-link: #0969da;
+  --gh-link-hover: #0550ae;
+
+  /* Buttons */
+  --gh-btn-bg: #f6f8fa;
+  --gh-btn-bg-hover: #eef1f4;
+
+  /* Shadows */
+  --gh-shadow-sm: 0 1px 3px rgba(27, 31, 36, 0.12);
+  --gh-shadow-md: 0 4px 12px rgba(27, 31, 36, 0.1);
+  --gh-shadow-lg: 0 8px 20px rgba(27, 31, 36, 0.15);
+}
+
+/* =====================================================
+   Reset & Base
+   ===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background: var(--gh-bg);
+  color: var(--gh-text-primary);
+}
+
+/* =====================================================
+   Typography
+   ===================================================== */
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--gh-text-primary);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: var(--gh-text-primary);
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem;
+  color: var(--gh-text-primary);
+}
+
+h4 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+  color: var(--gh-text-primary);
+}
+
+p {
+  font-size: 1rem;
+  color: var(--gh-text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+li {
+  font-size: 1rem;
+  color: var(--gh-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+/* =====================================================
+   Links
+   ===================================================== */
+
+a {
+  color: var(--gh-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--gh-link-hover);
+  text-decoration: underline;
+}
+
+/* =====================================================
+   Code Blocks
+   ===================================================== */
+
+code {
+  background: var(--gh-bg-subtle);
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+pre {
+  background: var(--gh-bg-subtle);
+  border: 1px solid var(--gh-border);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* =====================================================
+   Layout
+   ===================================================== */
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  min-height: calc(100vh - 200px);
+}
+
+main .home-h2 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* =====================================================
+   Header & Navigation
+   ===================================================== */
+
+header {
+  position: sticky;
+  top: 0;
+  background: var(--gh-bg);
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gh-text-primary);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gh-text-secondary);
+  text-decoration: none;
+}
+
+.header-container a:hover,
+nav a:hover {
+  color: var(--gh-text-primary);
+  text-decoration: none;
+}
+
+/* =====================================================
+   Cards
+   ===================================================== */
+
+.card-item {
+  background: var(--gh-bg);
+  border: 1px solid var(--gh-border);
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 24px;
+  transition: box-shadow 0.15s ease;
+}
+
+li.card-item {
+  list-style: none;
+}
+
+.card-item h3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.card-item:hover {
+  box-shadow: var(--gh-shadow-sm);
+}
+
+article.card-item header h2 {
+  margin-top: 0px;
+}
+
+/* =====================================================
+   Grids
+   ===================================================== */
+
+.project-grid,
+.skills-grid,
+.work-highlights,
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.interests-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.contact-grid,
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0 3rem 0;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minsize(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0 3rem 0;
+  list-style: none;
+  padding: 0;
+}
+
+/* =====================================================
+   Buttons
+   ===================================================== */
+
+.btn,
+.github-link {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: var(--gh-btn-bg);
+  color: var(--gh-text-primary);
+  border: 1px solid var(--gh-border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn:hover,
+.github-link:hover {
+  background: var(--gh-btn-bg-hover);
+  color: var(--gh-text-primary);
+  text-decoration: none;
+}
+
+.home-action-btn {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.home-action-btn a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gh-text-primary);
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* =====================================================
+   Post Meta & Badges
+   ===================================================== */
+
+.post-meta {
+  font-size: 0.875rem;
+  color: var(--gh-text-tertiary);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.github-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.github-badges img {
+  height: 20px;
+  border-radius: 4px;
+}
+
+/* =====================================================
+   Breadcrumb
+   ===================================================== */
+
+.breadcrumb {
+  max-width: 900px;
+  margin: 1rem auto 1.25rem;
+  font-size: 0.875rem;
+  color: var(--gh-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0px;
+}
+
+.breadcrumb a,
+.breadcrumb a i {
+  color: var(--gh-text-tertiary);
+}
+
+.breadcrumb a:hover {
+  color: var(--gh-link);
+}
+
+.breadcrumb-separator i {
+  font-size: 0.6rem;
+}
+
+.breadcrumb-current {
+  font-weight: 500;
+  color: var(--gh-text-primary);
+}
+
+/* =====================================================
+   Pagination
+   ===================================================== */
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  font-size: 0.875rem;
+}
+
+.page-link {
+  padding: 6px 12px;
+  border: 1px solid var(--gh-border);
+  border-radius: 6px;
+  background: var(--gh-bg-subtle);
+  color: var(--gh-text-primary);
+  transition: background 0.2s ease;
+}
+
+.page-link:hover {
+  background: var(--gh-btn-bg-hover);
+}
+
+.page-status {
+  color: var(--gh-text-secondary);
+}
+
+/* =====================================================
+   Footer
+   ===================================================== */
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container p {
+  font-size: 0.875rem;
+  color: var(--gh-text-secondary);
+}
+
+.footer-social {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-social a {
+  font-size: 1.25rem;
+  color: var(--gh-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.footer-social a:hover {
+  color: var(--gh-text-primary);
+}
+
+/* =====================================================
+   GitHub Stats
+   ===================================================== */
+
+.github-stats img {
+  width: 100%;
+  display: block;
+  margin: 1rem 0;
+}
+
+/* =====================================================
+   About Page
+   ===================================================== */
+
+.about-hero {
+  background: var(--gh-bg-subtle);
+  padding: 3rem 2rem;
+  border-radius: 6px;
+  margin-bottom: 3rem;
+  border: 1px solid var(--gh-border);
+}
+
+.about-hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero .title {
+  font-size: 1.25rem;
+  color: var(--gh-link);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.about-hero .location {
+  color: var(--gh-text-secondary);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.intro-section {
+  margin-bottom: 4rem;
+}
+
+.intro-section p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--gh-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 3rem 0 2rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--gh-border);
+}
+
+.section-header i {
+  font-size: 1.75rem;
+  color: var(--gh-link);
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.skill-category,
+.highlight-card,
+.opportunity-card,
+.stat-card {
+  background: var(--gh-bg);
+  border: 1px solid var(--gh-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.skill-category,
+.opportunity-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-category::before,
+.opportunity-card::before {
+  content: '';
+  position: absolute;
+  background: var(--gh-link);
+  transition: transform 0.3s ease;
+}
+
+.skill-category::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  transform: scaleX(0);
+}
+
+.opportunity-card::before {
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  transform: scaleY(0);
+}
+
+.skill-category:hover,
+.highlight-card:hover,
+.opportunity-card:hover,
+.stat-card:hover {
+  box-shadow: var(--gh-shadow-md);
+  border-color: var(--gh-link);
+}
+
+.skill-category:hover {
+  transform: translateY(-4px);
+}
+
+.opportunity-card:hover,
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.skill-category:hover::before,
+.opportunity-card:hover::before {
+  transform: scale(1);
+}
+
+.skill-category h3,
+.highlight-card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-category h3 i,
+.highlight-card .icon,
+.opportunity-card .icon {
+  color: var(--gh-link);
+}
+
+.skill-category h3 i {
+  font-size: 1.5rem;
+}
+
+.highlight-card .icon,
+.opportunity-card .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-category li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--gh-border-muted);
+}
+
+.skill-category li:last-child {
+  border-bottom: none;
+}
+
+.skill-category li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--gh-link);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.stat-card .number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gh-link);
+  margin-bottom: 0.5rem;
+}
+
+.stat-card .label {
+  color: var(--gh-text-secondary);
+  font-size: 1rem;
+}
+
+.interest-item {
+  padding: 1rem 1.25rem;
+  background: var(--gh-bg);
+  border: 1px solid var(--gh-border);
+  border-radius: 6px;
+  color: var(--gh-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.interest-item:hover {
+  border-color: var(--gh-link);
+  background: var(--gh-bg-subtle);
+}
+
+.interest-item i {
+  color: var(--gh-link);
+  font-size: 1.25rem;
+}
+
+/* =====================================================
+   Contact Page
+   ===================================================== */
+
+.contact-intro {
+  font-size: 1.125rem;
+  color: var(--gh-text-secondary);
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+.contact-card {
+  background: var(--gh-bg-subtle);
+  padding: 2rem;
+  border-radius: 6px;
+  border: 1px solid var(--gh-border);
+  box-shadow: var(--gh-shadow-sm);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--gh-shadow-lg);
+  border-color: var(--gh-link);
+}
+
+.contact-card .icon {
+  font-size: 2.5rem;
+  color: var(--gh-link);
+  margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+}
+
+.contact-card p {
+  margin: 0;
+}
+
+.contact-card a {
+  font-weight: 500;
+}
+
+.social-link {
+  background: var(--gh-bg);
+  border: 1px solid var(--gh-border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-link:hover {
+  border-color: var(--gh-link);
+  box-shadow: var(--gh-shadow-md);
+  transform: translateX(4px);
+}
+
+.social-link .icon {
+  font-size: 1.75rem;
+  width: 40px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.social-link.linkedin .icon { color: #0077b5; }
+.social-link.github .icon { color: var(--gh-text-primary); }
+.social-link.stackoverflow .icon { color: #f48024; }
+.social-link.twitter .icon { color: #1da1f2; }
+
+.social-link-content {
+  flex: 1;
+}
+
+.social-link-content a {
+  color: var(--gh-text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.social-link-content a:hover {
+  color: var(--gh-link);
+}
+
+.social-link-content span {
+  color: var(--gh-text-secondary);
+  font-size: 0.9rem;
+}
+
+.response-box {
+  background: var(--gh-bg-subtle);
+  border-left: 4px solid var(--gh-link);
+  padding: 1.5rem 2rem;
+  border-radius: 6px;
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.response-box i {
+  font-size: 2rem;
+  color: var(--gh-link);
+}
+
+.response-box p {
+  margin: 0;
+  flex: 1;
+}
+
+.cta-section {
+  text-align: center;
+  padding: 4rem 0 2rem 0;
+  border-top: 1px solid var(--gh-border);
+  margin-top: 3rem;
+}
+
+.cta-section i {
+  font-size: 3rem;
+  color: var(--gh-link);
+  margin-bottom: 1rem;
+}
+
+.cta-section h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.75rem;
+}
+
+.cta-section p {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.contact-cta {
+  background: var(--gh-link);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.contact-cta h2 {
+  color: white;
+  margin: 0 0 1rem 0;
+  font-size: 1.75rem;
+}
+
+.contact-cta p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: var(--gh-link);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: var(--gh-link-hover);
+  text-decoration: none;
+}
+
+.contact-btn i {
+  font-size: 1.25rem;
+}
+
+/* =====================================================
+   Responsive
+   ===================================================== */
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  main {
+    padding: 1.25rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .contact-grid,
+  .opportunity-grid,
+  .interests-list,
+  .social-links,
+  .skills-grid,
+  .work-highlights,
+  .stats-row,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+  }
+
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
