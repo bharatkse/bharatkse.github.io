@@ -1,48 +1,106 @@
 ---
-title: "AWS Roles Anywhere Authentication"
-excerpt: "Generate temporary AWS credentials without AWS signing helper"
+layout: single
+title: "Secure Hybrid Authentication with AWS Roles Anywhere"
+permalink: /projects/aws-roles-anywhere/
+excerpt: "Extending AWS IAM to on-prem and CI/CD environments using X.509 certificates."
+
+order: 2
+featured: true
+
+categories: [aws, security, iam]
+tags: [aws, iam, roles-anywhere, security, x509]
+
+problem: >
+  Static AWS credentials in hybrid environments were insecure,
+  difficult to rotate, and frequently leaked through CI/CD pipelines.
+
+solution: >
+  Implemented certificate-based authentication using AWS Roles Anywhere
+  to issue short-lived credentials via STS without long-lived access keys.
+
+outcome: >
+  Removed static credentials entirely, improved auditability,
+  and enforced least-privilege access across on-prem and CI/CD workloads.
+
+repo_description: >
+  Production-ready implementation of AWS Roles Anywhere authentication,
+  including self-signed X.509 certificate generation and secure
+  temporary credential retrieval without the AWS signing helper.
+
+metrics:
+  - "Zero long-lived AWS credentials"
+  - "Automated credential rotation"
+  - "Full IAM audit trail"
+  - "Least-privilege access enforcement"
+
 github:
   repo: "https://github.com/bharatkse/aws-roles-anywhere-auth"
-  branch: "main"
-  ci: true
-  codecov: true
-  sonar: false
+  repo_name: "aws-roles-anywhere-auth"
+
+blog:
+  title: "AWS Roles Anywhere: Extending IAM Beyond AWS"
+  url: "/blog/aws-roles-anywhere/"
+
 sidebar:
   - title: "Role"
-    text: "Developer"
+    text: "Backend & Cloud Security Engineer"
+
   - title: "Tech Stack"
-    text: "Python, AWS IAM, Cryptography, X509"
+    text: "AWS IAM, STS, Roles Anywhere, X.509, Python"
+
   - title: "Repository"
-    text: "[GitHub](https://github.com/bharatkse/aws-roles-anywhere-auth)"
-  - title: "Stars"
-    text: "⭐ 4"
+    text: "[View on GitHub](https://github.com/bharatkse/aws-roles-anywhere)"
+
+  - title: "Related Write-up"
+    text: "[Read Blog →](/blog/aws-roles-anywhere-iam/)"
 ---
 
-## Overview
+## Problem
 
-This project provides a Python implementation for generating temporary AWS credentials using AWS Roles Anywhere without requiring the AWS signing helper.
+Hybrid and on-prem workloads required AWS access but relied on:
+- Static access keys
+- Manual rotation
+- Poor auditability
+- High security risk
 
-## Key Features
+---
 
-- ✅ Generate temporary credentials programmatically
-- ✅ X509 certificate creation and management
-- ✅ Support for multiple AWS roles
-- ✅ Enterprise-grade error handling
-- ✅ Security best practices implementation
+## Solution
 
-## Technologies Used
+Implemented **AWS Roles Anywhere** to authenticate workloads using X.509 certificates.
 
-- Python
-- AWS IAM and Roles Anywhere
-- Cryptography libraries
-- X509 Certificate handling
+- Certificate-based authentication
+- Short-lived STS credentials
+- IAM role scoping
+- CI/CD and developer laptop support
 
-## Use Cases
+---
 
-- Enterprise authentication systems
-- Microservices credential management
-- CI/CD pipeline integration
-- Automated credential rotation
-- Service-to-service authentication
+## Architecture Diagram
 
-[View on GitHub](https://github.com/bharatkse/aws-roles-anywhere-auth){: .btn .btn--primary}
+_Add diagram here:_  
+`assets/images/architecture/aws-roles-anywhere-flow.png`
+
+---
+
+## Key Design Decisions
+
+- No long-lived secrets
+- Explicit role-to-certificate mapping
+- Least-privilege IAM policies
+- Clear trust boundaries
+
+---
+
+## Outcome & Impact
+
+- 🔐 Eliminated static AWS credentials
+- 🔄 Automated credential rotation
+- 🧾 Improved auditability and compliance
+- 🚀 Safer hybrid and CI/CD workflows
+
+---
+
+## Related Writing
+
+- [AWS Roles Anywhere: Extending IAM Beyond AWS](/blog/aws-roles-anywhere/)

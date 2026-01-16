@@ -1,23 +1,30 @@
 ---
-title: "Contact"
+title: "Contact & Work With Me"
 permalink: /contact/
 layout: default
 ---
 <p class="contact-intro">
-  I'm always interested in hearing about new opportunities and discussing interesting technical challenges. Whether you have a project in mind or just want to chat about technology, feel free to reach out.
+  I work with teams and organizations to design and build 
+  <strong>scalable, secure, and production-ready backend systems</strong>.
+  If you're looking for help with backend architecture, cloud systems,
+  or complex workflows — I'm happy to discuss.
 </p>
 
 <div class="contact-grid">
   <div class="contact-card">
     <div class="icon"><i class="fas fa-envelope"></i></div>
     <h3>Email</h3>
-    <p><a href="mailto:kumar.bhart28@gmail.com">kumar.bhart28@gmail.com</a></p>
+    <p>
+      <a href="mailto:kumar.bhart28@gmail.com">kumar.bhart28@gmail.com</a><br/>
+      <small>Best for project discussions, consulting, and role inquiries</small>
+    </p>
   </div>
 
   <div class="contact-card">
     <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
     <h3>Location</h3>
-    <p>Ahmedabad, India 🇮🇳</p>
+    <p>{{ site.env.SITE_LOCATION | default: "Ahmedabad" }} India 🇮🇳</p>
+    <small>Open to remote & global opportunities</small>
   </div>
 </div>
 
@@ -28,7 +35,7 @@ layout: default
     <div class="icon"><i class="fab fa-linkedin"></i></div>
     <div class="social-link-content">
       <a href="https://linkedin.com/in/bharat-kumar28">LinkedIn</a>
-      <span>Professional network and updates</span>
+      <span>Career history, recommendations, and professional updates</span>
     </div>
   </li>
   
@@ -36,7 +43,7 @@ layout: default
     <div class="icon"><i class="fab fa-github"></i></div>
     <div class="social-link-content">
       <a href="https://github.com/bharatkse">GitHub</a>
-      <span>Open source projects and code</span>
+      <span>Backend projects, architecture examples, and system design demos</span>
     </div>
   </li>
 </ul>
@@ -45,24 +52,24 @@ layout: default
 
 <div class="interests-list">
   <div class="interest-item">
-    <i class="fas fa-server"></i>
-    <span>Building scalable backend systems</span>
+    <div class="icon"><i class="fas fa-server"></i></div>
+    <span>Designing event-driven backend architectures</span>
   </div>
   <div class="interest-item">
-    <i class="fas fa-cloud"></i>
-    <span>Cloud architecture & AWS infrastructure</span>
+    <div class="icon"><i class="fas fa-cloud"></i></div>
+    <span>Building cloud-native systems on AWS (Lambda, SQS, Step Functions)</span>
   </div>
   <div class="interest-item">
-    <i class="fas fa-project-diagram"></i>
-    <span>System design & optimization</span>
+    <div class="icon"><i class="fas fa-project-diagram"></i></div>
+    <span>System design, performance tuning & failure handling</span>
   </div>
   <div class="interest-item">
-    <i class="fas fa-code-branch"></i>
-    <span>Open source contributions</span>
+    <div class="icon"><i class="fas fa-code-branch"></i></div>
+    <span>Production-grade open source backend tooling</span>
   </div>
   <div class="interest-item">
-    <i class="fas fa-pen-fancy"></i>
-    <span>Technical writing & mentoring</span>
+    <div class="icon"><i class="fas fa-pen-fancy"></i></div>
+    <span>Technical writing on backend architecture & engineering trade-offs</span>
   </div>
 </div>
 
@@ -73,19 +80,27 @@ layout: default
     <div class="opportunity-card">
       <div class="icon"><i class="fas fa-laptop-code"></i></div>
       <h4>Freelance & Contract</h4>
-      <p>Backend development, API design, cloud infrastructure, and system architecture consulting</p>
+      <p>
+        Backend system design, API architecture, cloud-native development,
+        and distributed workflow consulting
+      </p>
     </div>
 
     <div class="opportunity-card">
       <div class="icon"><i class="fas fa-briefcase"></i></div>
       <h4>Full-Time Roles</h4>
-      <p>Senior Backend Engineer, Tech Lead, or Architect positions in cloud-first companies</p>
+      <p>
+      Senior Backend Engineer, Tech Lead, or Platform / Architecture-focused roles
+      </p>
     </div>
 
     <div class="opportunity-card">
       <div class="icon"><i class="fas fa-user-tie"></i></div>
       <h4>Consulting</h4>
-      <p>SaaS architecture, cloud migration, DevOps setup, code reviews, and team mentoring</p>
+      <p>
+    SaaS architecture reviews, cloud migrations, backend audits,
+    code reviews, and team mentoring
+    </p>
     </div>
 
     <div class="opportunity-card">
@@ -98,11 +113,17 @@ layout: default
 
 <div class="response-box">
   <i class="fas fa-clock"></i>
-  <p><strong>Response Time:</strong> I typically respond to inquiries within 24 hours. For urgent matters, please mention it in your message and I'll prioritize accordingly.</p>
+  <p>
+<strong>Response Time:</strong> I usually respond within 24 hours on business days.
+For urgent or time-sensitive matters, please mention it in your message.
+</p>
 </div>
 
 <div class="cta-section">
   <i class="fas fa-rocket"></i>
   <h2>Let's Build Something Great</h2>
-  <p>Reach out anytime to discuss your project or just to chat about technology.</p>
+  <p>
+If you're building or scaling a backend system and want a reliable engineering partner,
+let’s talk.
+</p>
 </div>

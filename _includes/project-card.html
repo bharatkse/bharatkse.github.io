@@ -1,20 +1,65 @@
-<article class="card-item project-item">
-  <h3>{{ project.title }}</h3>
+<article class="project-card">
 
-  <p>{{ project.excerpt }}</p>
 
-  {% if project.tech %}
-    <p class="project-tech">
-      <strong>Tech:</strong> {{ project.tech }}
+  <!-- LEFT: GitHub Preview -->
+  <div class="project-preview">
+    <a
+    href="{{ project.github.repo }}"
+    target="_blank"
+    rel="noopener"
+    aria-label="Open {{ project.title }} on GitHub"
+  >
+    <div class="github-preview-header">
+      <i class="fab fa-github"></i>
+      <span>{{ project.github.repo_name }}</span>
+    </div>
+
+    <p class="repo-description">
+      {{ project.repo_description | default: project.excerpt }}
     </p>
-  {% endif %}
 
-  {% if project.github %}
-    <a href="{{ project.github.repo}}"
-       class="github-link"
-       target="_blank"
-       rel="noopener">
-      View on GitHub
     </a>
-  {% endif %}
+  </div>
+  
+  <!-- RIGHT: Project Content -->
+  <div class="project-content">
+    <a
+    href="{{ project.github.repo }}"
+    target="_blank"
+    rel="noopener"
+    aria-label="Open {{ project.title }} on GitHub"
+  >
+    <div class="project-card-header">
+      <h3>{{ project.title }}</h3>
+    </div>
+    </a>
+    <p class="project-excerpt">
+      {{ project.excerpt | strip_html | truncatewords: 35 }}
+    </p>
+
+    {% if project.tech %}
+      <div class="project-tech">
+        <i class="fas fa-code"></i> {{ project.tech }}
+      </div>
+    {% endif %}
+    
+    <!-- TAG BADGES -->
+    {% if project.tags %}
+      <div class="project-meta-badges">
+        {% for tag in project.tags %}
+          <span class="badge badge-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="project-actions">
+      {% if project.blog.url %}
+        <a href="{{ project.blog.url }}" class="btn-project">
+          <i class="fas fa-book-open"></i>
+          View Blog
+        </a>
+      {% endif %}
+    </div>
+
+  </div>
 </article>

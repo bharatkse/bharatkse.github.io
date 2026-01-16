@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+<article class="blog-article">
+
+  <!-- Header -->
+  <header class="blog-header">
+  <h1 class="blog-title">{{ page.title }}</h1>
+
+  {% if page.tags %}
+  <div class="blog-tags-top">
+    {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="blog-meta">
+    <span>
+      <i class="fas fa-calendar"></i>
+      {{ page.date | date: "%B %d, %Y" }}
+    </span>
+
+    {% if page.read_time %}
+    <span>
+      <i class="fas fa-clock"></i>
+      {{ page.read_time }} min read
+    </span>
+    {% endif %}
+
+    {% if page.categories %}
+    <span>
+      <i class="fas fa-folder"></i>
+      {{ page.categories | join: ", " }}
+    </span>
+    {% endif %}
+
+    {% if page.github.repo %}
+    <span class="meta-github">
+      <a
+        href="{{ page.github.repo }}"
+        target="_blank"
+        rel="noopener"
+        aria-label="View source code on GitHub"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+    </span>
+  {% endif %}
+  
+  </div>
+</header>
+
+
+  <!-- Optional summary -->
+  {% if page.summary %}
+  <section class="blog-summary">
+    <p>{{ page.summary }}</p>
+  </section>
+  {% endif %}
+
+  <!-- Main content -->
+  <section class="blog-content">
+    {{ content }}
+  </section>
+
+  <!-- Footer -->
+  <footer class="blog-footer">
+    <div class="blog-cta">
+      <p>
+        Enjoyed this article?
+        <a href="/projects/">Explore related case studies</a> or
+        <a href="/contact/">get in touch</a>.
+      </p>
+    </div>
+  </footer>
+
+</article>

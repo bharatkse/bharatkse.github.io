@@ -3,38 +3,58 @@ layout: default
 permalink: /about/
 title: "About"
 ---
+
 <div class="about-hero">
-  <div class="about-hero-content">
-    <h1>Bharat Kumar</h1>
-    <div class="title">
-      <i class="fas fa-code"></i>
-      Senior Software Engineer
+  <div class="about-hero-inner">
+    <div class="about-hero-image">
+      <img 
+        src="/assets/images/profile.jpeg"
+        alt="Bharat Kumar - Senior Backend & Cloud Engineer"
+        class="about-profile-image"
+      />
     </div>
-    <div class="location">
-      <i class="fas fa-map-marker-alt"></i>
-      Ahmedabad, India
+    <div class="about-hero-content">
+      <h1>Bharat Kumar</h1>
+      <div class="title">
+        <i class="fas fa-server"></i>
+        Senior Backend & Cloud Engineer
+      </div>
+      <div class="location">
+        <i class="fas fa-map-marker-alt"></i>
+        {{ site.env.SITE_LOCATION | default: "Ahmedabad" }}, India · Open to Remote & Global Roles
+      </div>
     </div>
   </div>
 </div>
 
 <div class="intro-section">
-  <p>Hi, I'm Bharat Kumar, a Senior Software Engineer specializing in building scalable backend systems and cloud infrastructure using Python, Django, FastAPI, and AWS.</p>
+  <p>
+    I’m a backend-focused engineer with <strong>9+ years of experience</strong>
+    building and operating <strong>scalable, event-driven, production-grade systems</strong>
+    using Python and cloud-native architectures.
+  </p>
 
-  <p>With years of experience in software development, I've worked on everything from microservices architectures to large-scale data processing pipelines. I'm passionate about clean code, system design, and solving complex technical challenges.</p>
+  <p>
+    My work spans <strong>high-throughput APIs</strong>, <strong>asynchronous workflows</strong>,
+    <strong>secure authentication systems (SSO, MFA, RBAC, PBAC)</strong>,
+    and <strong>distributed systems on AWS</strong>.
+    I focus heavily on correctness, reliability, observability, and long-term maintainability
+    in real production environments.
+  </p>
 </div>
 
 <div class="stats-row">
   <div class="stat-card">
     <div class="number">9+</div>
-    <div class="label">Years Experience</div>
+    <div class="label">Years of Backend Experience</div>
   </div>
   <div class="stat-card">
-    <div class="number">50+</div>
-    <div class="label">Projects Delivered</div>
+    <div class="number">20+</div>
+    <div class="label">Production Systems Designed & Maintained</div>
   </div>
   <div class="stat-card">
     <div class="number">10+</div>
-    <div class="label">Technologies</div>
+    <div class="label">Core Platforms & Technologies</div>
   </div>
 </div>
 
@@ -44,98 +64,159 @@ title: "About"
 </div>
 
 <div class="skills-grid">
+
   <div class="skill-category">
-    <h3><i class="fas fa-code"></i> Backend Development</h3>
+    <h3><i class="fas fa-code"></i> Backend Engineering</h3>
     <ul>
       <li>Python</li>
-      <li>Django</li>
-      <li>FastAPI</li>
-      <li>Flask</li>
-      <li>REST APIs</li>
+      <li>Django & Django REST Framework</li>
+      <li>FastAPI & Flask</li>
+      <li>Pydantic (data validation & schemas)</li>
+      <li>SQLAlchemy (ORM & query optimization)</li>
+      <li>RESTful & asynchronous APIs</li>
+      <li>Background jobs & task queues</li>
+      <li>Agent-based workflows & service orchestration</li>
     </ul>
   </div>
 
   <div class="skill-category">
-    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+    <h3><i class="fas fa-cloud"></i> Cloud & Infrastructure (AWS)</h3>
     <ul>
-      <li>AWS (EC2, S3, Lambda)</li>
-      <li>Docker</li>
-      <li>Kubernetes</li>
-      <li>CI/CD</li>
-      <li>Terraform</li>
+      <li>EC2 (compute & autoscaling)</li>
+      <li>S3 (object storage, lifecycle policies)</li>
+      <li>API Gateway & Lambda</li>
+      <li>SQS, SNS & EventBridge</li>
+      <li>Step Functions (workflow orchestration)</li>
+      <li>Route 53 (DNS & traffic routing)</li>
+      <li>AWS Cognito (auth & identity federation)</li>
+      <li>Docker & Kubernetes</li>
+      <li>Infrastructure as Code (CloudFormation, Terraform)</li>
+      <li>CI/CD pipelines</li>
     </ul>
   </div>
 
+
   <div class="skill-category">
-    <h3><i class="fas fa-database"></i> Databases</h3>
+    <h3><i class="fas fa-database"></i> Data, Storage & Streaming</h3>
     <ul>
-      <li>PostgreSQL</li>
-      <li>MySQL</li>
-      <li>Redis</li>
-      <li>MongoDB</li>
+      <li>PostgreSQL (schema design, indexing, migrations)</li>
+      <li>SQLAlchemy ORM</li>
       <li>DynamoDB</li>
+      <li>Redis (caching, rate limiting)</li>
+      <li>Elasticsearch</li>
+      <li>Apache Kafka (event streaming)</li>
+    </ul>
+  </div>
+
+
+  <div class="skill-category">
+    <h3><i class="fas fa-stream"></i> Event-Driven Systems</h3>
+    <ul>
+      <li>Asynchronous messaging (SQS, SNS)</li>
+      <li>Retries, DLQs & idempotency</li>
+      <li>Workflow orchestration</li>
+      <li>Failure isolation & backpressure patterns</li>
     </ul>
   </div>
 
   <div class="skill-category">
-    <h3><i class="fas fa-wrench"></i> Tools & Others</h3>
+    <h3><i class="fas fa-shield-alt"></i> Security & Identity</h3>
     <ul>
-      <li>Git</li>
+      <li>SSO (SAML, OIDC)</li>
+      <li>OAuth2 & JWT</li>
+      <li>Multi-Factor Authentication (2FA / MFA)</li>
+      <li>RBAC & PBAC</li>
+      <li>AWS Cognito & IAM</li>
+    </ul>
+  </div>
+
+  <div class="skill-category">
+    <h3><i class="fas fa-chart-line"></i> Observability & Reliability</h3>
+    <ul>
+      <li>Prometheus (metrics & alerting)</li>
+      <li>Grafana (dashboards & visualization)</li>
+      <li>CloudWatch Metrics & Logs</li>
+      <li>Centralized & structured logging</li>
+      <li>Distributed tracing</li>
+      <li>Production debugging & incident response</li>
+    </ul>
+  </div>
+
+  <div class="skill-category">
+    <h3><i class="fas fa-wrench"></i> Tools & Platforms</h3>
+    <ul>
+      <li>Git & GitHub</li>
       <li>Linux</li>
-      <li>Nginx</li>
+      <li>Nginx & API Gateway</li>
       <li>RabbitMQ</li>
       <li>Celery</li>
     </ul>
   </div>
+
 </div>
 
 <div class="section-header">
   <i class="fas fa-rocket"></i>
-  <h2>What I Do</h2>
+  <h2>How I Work</h2>
 </div>
 
 <div class="work-highlights">
-  <div class="highlight-card">
-    <div class="icon"><i class="fas fa-server"></i></div>
-    <h3>Backend Architecture</h3>
-    <p>Building robust, scalable backend systems that can handle millions of requests with optimized performance.</p>
-  </div>
 
   <div class="highlight-card">
     <div class="icon"><i class="fas fa-project-diagram"></i></div>
-    <h3>System Design</h3>
-    <p>Designing APIs, optimizing database queries, and implementing caching strategies for high availability.</p>
+    <h3>System Design First</h3>
+    <p>
+      I start with constraints — scale, failure modes, cost, and operational complexity —
+      before selecting tools or frameworks.
+    </p>
   </div>
 
   <div class="highlight-card">
-    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
-    <h3>Cloud Solutions</h3>
-    <p>Helping teams migrate to AWS and design cost-effective, secure infrastructure with automation.</p>
+    <div class="icon"><i class="fas fa-server"></i></div>
+    <h3>Production-Oriented Engineering</h3>
+    <p>
+      I focus on correctness, defensive coding, performance tuning,
+      and designing systems that degrade gracefully under failure.
+    </p>
   </div>
+
+  <div class="highlight-card">
+    <div class="icon"><i class="fas fa-cloud"></i></div>
+    <h3>Cloud-Native Execution</h3>
+    <p>
+      I build cloud systems with security, observability, and automation
+      baked in from day one — not added later.
+    </p>
+  </div>
+
 </div>
 
 <div class="section-header">
-  <i class="fas fa-heart"></i>
+  <i class="fas fa-lightbulb"></i>
   <h2>Beyond Code</h2>
 </div>
 
-<p>When I'm not coding, I enjoy learning about new technologies, contributing to open source projects, and sharing knowledge through blog posts and technical documentation. I believe in continuous learning and giving back to the developer community.</p>
+<p>
+  Beyond coding, I enjoy analyzing system failures, reviewing architectural decisions,
+  mentoring engineers, and documenting real-world backend lessons.
+  I strongly believe good engineering is about understanding trade-offs, not just choosing tools.
+</p>
 
 <div class="contact-cta">
-  <h2>Let's Connect</h2>
-  <p>Feel free to reach out if you'd like to collaborate on a project or just want to chat about technology!</p>
+  <h2>Let’s Connect</h2>
+  <p>
+    If you’re building or scaling a backend system, need architectural guidance,
+    or want to collaborate on meaningful engineering work, feel free to reach out.
+  </p>
   <div class="contact-buttons">
     <a href="https://github.com/bharatkse" class="contact-btn">
-      <i class="fab fa-github"></i>
-      GitHub
+      <i class="fab fa-github"></i> GitHub
     </a>
     <a href="https://linkedin.com/in/bharat-kumar28" class="contact-btn">
-      <i class="fab fa-linkedin"></i>
-      LinkedIn
+      <i class="fab fa-linkedin"></i> LinkedIn
     </a>
     <a href="mailto:kumar.bhart28@gmail.com" class="contact-btn">
-      <i class="fas fa-envelope"></i>
-      Email
+      <i class="fas fa-envelope"></i> Email
     </a>
   </div>
 </div>

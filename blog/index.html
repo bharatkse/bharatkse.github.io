@@ -1,12 +1,37 @@
 ---
 layout: default
-title: Blog
+title: Engineering Blog
 ---
 
+<div class="blog-intro">
+  <p>
+    This blog contains my notes and write-ups on
+    <strong>backend architecture, system design, cloud-native engineering</strong>,
+    and lessons learned from building and operating production systems.
+  </p>
+
+  <p>
+    I focus on practical topics such as event-driven workflows, API design,
+    reliability, security, and real-world trade-offs — not just tutorials.
+  </p>
+</div>
+
+<hr/>
+
+<h2>Latest Writing</h2>
+
 <div class="blog-posts-container">
-  {% for post in paginator.posts %}
-    {% include post-card.html post=post %}
-  {% endfor %}
+  {% if paginator.posts.size > 0 %}
+    {% for post in paginator.posts %}
+      {% include post-card.html post=post %}
+    {% endfor %}
+  {% else %}
+    <p>
+      New articles are being added.
+      Topics include backend system design, event-driven architectures,
+      and production engineering lessons.
+    </p>
+  {% endif %}
 </div>
 
 {% include pagination.html
@@ -15,3 +40,13 @@ title: Blog
    prev_url=paginator.previous_page_path
    next_url=paginator.next_page_path
 %}
+
+<hr/>
+
+<div class="blog-footer-cta">
+  <p>
+    If you’d like to discuss any of these topics or have questions about
+    backend architecture or system design,
+    feel free to <a href="/contact/">reach out</a>.
+  </p>
+</div>

@@ -19,4 +19,18 @@
       {{ include.category }}
     </span>
   {% endif %}
+
+  {% if include.github.repo %}
+    <span class="meta-github">
+      <a
+        href="{{ include.github.repo }}"
+        target="_blank"
+        rel="noopener"
+        aria-label="View source code on GitHub"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+    </span>
+  {% endif %}
+
 </div>

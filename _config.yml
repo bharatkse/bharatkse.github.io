@@ -5,16 +5,18 @@
 # =====================================================
 # SITE METADATA
 # =====================================================
-title: "Bharat Kumar"
-subtitle: "Senior Software Engineer"
-tagline: "Building scalable cloud solutions with Python, Django, FastAPI, and AWS"
-description: "Senior Software Engineer specializing in backend development, cloud architecture, and scalable solutions. Python • Django • FastAPI • AWS • Microservices"
+title: "Bharat Kumar – Backend & Cloud Engineer"
+tagline: "Senior Backend & Cloud Engineer · Python · AWS · Event-Driven Systems"
+description: "Senior backend engineer specializing in Python, FastAPI, Django, and AWS. Focused on scalable, event-driven systems."
 
 # URLs
 url: "https://bharatkse.github.io"
 baseurl: ""
 repository: "bharatkse/bharatkse.github.io"
 github_username: "bharatkse"
+
+# Global post permalink (IMPORTANT)
+permalink: /blog/:title/
 
 # =====================================================
 # THEME SETTINGS
@@ -30,7 +32,7 @@ minimal_mistakes_skin: "default"
 # Logo and favicon
 logo: false
 favicon: false
-teaser: "/assets/images/teaser.jpg"
+# teaser: "/assets/images/teaser.jpg"
 breadcrumbs: true
 
 # =====================================================
@@ -38,10 +40,10 @@ breadcrumbs: true
 # =====================================================
 author:
   name: "Bharat Kumar"
-  avatar: "/assets/images/avatar.jpg"  # Add your profile picture here
-  bio: "Senior Software Engineer | Backend Development | Cloud Architecture | Python • Django • FastAPI • AWS"
-  location: "Bangalore, India 🇮🇳"
+  avatar: "/assets/images/profile.jpeg"  # Add your profile picture here
+  bio: "Senior Backend & Cloud Engineer | Python • Django • FastAPI • AWS | Event-Driven Systems"
   email: "kumar.bhart28@gmail.com"
+  location: "{{ site.env.SITE_LOCATION | default: 'Ahmedabad India' }}"
   
   # Social links
   links:
@@ -82,36 +84,7 @@ atom_feed:
 # NAVIGATION
 # =====================================================
 include:
-  - .htaccess
   - _pages
-  - CHANGELOG
-  - LICENSE
-
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - Rakefile
-  - README
-  - tmp
-  - .github
 
 # =====================================================
 # MARKDOWN PROCESSING
@@ -154,22 +127,15 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jemoji
+  - jekyll-seo-tag
 
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
-  - jemoji
 
 # =====================================================
-# PAGINATION (DISABLED - Using manual loop instead)
+# PAGINATION
 # =====================================================
-# Note: Minimal Mistakes theme handles pagination differently
-# We're using a simpler approach with all posts on one page
-# If you want pagination, you may need to use jekyll-paginate-v2
-paginate: 2
+# Pagination for blog index
+# Uses jekyll-paginate with Minimal Mistakes
+paginate: 5
 paginate_path: "/blog/page:num/"
 
 # =====================================================
@@ -271,9 +237,9 @@ social:
   type: "Person"
   name: "Bharat Kumar"
   links:
+    - "https://bharatkse.github.io"
     - "https://github.com/bharatkse"
     - "https://linkedin.com/in/bharat-kumar28"
-    - "https://stackoverflow.com/users/4286590/bharatk"
 
 # =====================================================
 # READING TIME
